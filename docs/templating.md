@@ -1478,6 +1478,21 @@ It is possible to search for patterns in a list to replace:
 aaxbbccc
 ```
 
+It is also possible to use Regular expressions when the regex is prefixed with the letter `r`:
+
+**Input**
+
+```jinja
+{% set phrase = "Great Job!" %}
+{{ phrase | replace(r/([^a-z])/g, '_') }}
+```
+
+**Output**
+
+```jinja
+_reat__ob_
+```
+
 ### reverse
 
 Reverse a string:
